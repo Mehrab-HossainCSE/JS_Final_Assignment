@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="root">
+    <div class="header">
+      <div><h2>Messenger/Saifuddin</h2></div>
+      <div><h2>Tomal Ahmed</h2></div>
+    </div>
+    <div class="left_panel">
+      <div class="item">
+        <img src="icons8-instagram-50.png" alt="">
+      </div>
+      <div class="item"> <img src="icons8-home-48.png" alt=""></div>
+      <div class="item"><img src="icons8-notification-50.png" alt=""></div>
+      <div class="item"><img src="icons8-setting-50.png" alt=""></div>
+    </div>
+    <div class="left_panel_lower">
+      <div class="item"><img src="icons8-arrow.gif" alt=""></div>
+    </div>
+    <div class="middle">
+      <div class="item"><img src="icons8-bbm-messenger-64.png" alt=""></div>
+      <div class="item"><img src="icons8-link-50.png" alt=""></div>
+      <div class="item"><img src="icons8-photo-30.png" alt=""></div>
+    </div>
+    <div class="main_content" id="chat"></div>
+    <div class="input_button">
+      <input class="bnt" type="text" id="message-input" >
+      <button class="send-button" onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+  
+  <!-- <script>
+
+
+document.getElementById("message-input").addEventListener("input", function() {
+  typingIndicator();
+});
+
+// Function to show typing indicator
+function typingIndicator() {
+  // Clear existing typing indicators
+  var existingTypingIndicators = document.querySelectorAll(".typing-indicator");
+  existingTypingIndicators.forEach(function(indicator) {
+    indicator.remove();
+  });
+
+  // Get input box value
+  var messageInput = document.getElementById("message-input");
+  var messageText = messageInput.value.trim();
+
+  // Only show typing indicator if there's text in the input box
+  if (messageText !== "") {
+    // Get input box position
+    var inputBox = document.getElementById("message-input");
+    var inputBoxRect = inputBox.getBoundingClientRect();
+
+    // Calculate position for typing indicator
+    var typingIndicatorTop = inputBoxRect.top - 30; // Adjust this value as needed
+    var typingIndicatorLeft = inputBoxRect.left;
+
+    // Add new typing indicator
+    var chatContainer = document.getElementById("chat");
+    var typingIndicator = document.createElement("div");
+    typingIndicator.classList.add("typing-indicator");
+    typingIndicator.style.position = "absolute";
+    typingIndicator.style.top = typingIndicatorTop + "px";
+    typingIndicator.style.left = typingIndicatorLeft + "px";
+    typingIndicator.textContent = "Typing...";
+    chatContainer.appendChild(typingIndicator);
+  }
+}
+
+
+// Function to clear typing indicator
+function clearTypingIndicator() {
+  var existingTypingIndicators = document.querySelectorAll(".typing-indicator");
+  existingTypingIndicators.forEach(function(indicator) {
+    indicator.remove();
+  });
+}
+
+// Event listener for input field focus
+document.getElementById("message-input").addEventListener("focus", typingIndicator);
+
+
+    // Function to debounce another function
+    function debounce(func, delay) {
+      let timer;
+      return function() {
+        clearTimeout(timer);
+        timer = setTimeout(func, delay);
+      };
+    }
+
+    // Function to send message
+    function sendMessage() {
+      // Get input value
+      var messageInput = document.getElementById("message-input");
+      var messageText = messageInput.value.trim();
+
+      if (messageText === "") {
+        alert("Please enter a message.");
+        return;
+      }
+
+      // Create message element for user input message
+      var chatContainer = document.getElementById("chat");
+      var messageElement = document.createElement("div");
+      messageElement.classList.add("message", "outgoing-message");
+      messageElement.innerHTML = '<div class="message-text">You:' + messageText + ' <span class="message-status">✓</span></div>';
+      chatContainer.appendChild(messageElement);
+
+      // Clear input
+      messageInput.value = "";
+
+      // Scroll to bottom
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+
+      // Simulate message status update
+      setTimeout(function() {
+        messageElement.querySelector(".message-status").textContent = "✓"; // Change status to delivered
+        messageElement.querySelector(".message-text").style.color = "gray";
+      }, 1000);
+
+      setTimeout(function() {
+        messageElement.querySelector(".message-status").textContent = "✓"; // Change status to read
+        messageElement.querySelector(".message-text").style.color = "green";
+      }, 2000);
+    }
+
+    // Function to simulate receiving message
+    function receiveMessage(messageText) {
+      var chatContainer = document.getElementById("chat");
+
+      var messageElement = document.createElement("div");
+      messageElement.classList.add("message", "incoming-message");
+      messageElement.innerHTML = '<div class="avatar"></div><div class="message-text">Other: ' + messageText + ' <span class="message-status">✓</span></div>';
+      chatContainer.appendChild(messageElement);
+      chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to bottom
+    } -->
+
+    
+    <script src="index.js"></script>
+</body>
+</html>

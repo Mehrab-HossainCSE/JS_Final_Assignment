@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .root {
+    width: 80%;
+    height: 80%;
+    margin: 5% 10%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    background-color: rgb(245, 243, 239);
+  }
+  
+  .header {
+    grid-column-start: 2;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+  }
+  
+  .left_panel {
+    grid-row-start: 1;
+    grid-row-end: 13;
+  }
+  
+  .middle {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 13;
+  }
+  
+  .main_content {
+    grid-column-start: 5;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 12;
+  }
+  
+  .input_button {
+    grid-column-start: 5;
+    grid-column-end: 13;
+    grid-row-start: 12;
+    grid-row-end: 13;
+  }
+  
+  .item {
+    margin-top: 2rem;
+  }
+  
+  .bnt {
+    width: 80%;
+    height: 60%;
+  }
+  
+  .send-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .send-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+  }
+  
+  .message-text {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 8px;
+    
+}
+ 
+#chat{
+  text-align: right;
+  margin-right: 1rem;
+}
+.text_class{
+  margin-top: 0.5rem ;
+  margin-right: 3rem;
+  
+} 
+.message-sent-tomal{
+  margin-right: 3rem;
+  margin-top: .5rem;
+}
+.profile-container {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.profile-picture {
+  width: 48px; /* Adjust width as needed */
+  height: 48px; /* Adjust height as needed */
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+.message-sent-saifuddin{
+  margin-left: 3.5rem;
+}
