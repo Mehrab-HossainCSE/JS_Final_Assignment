@@ -12,39 +12,58 @@
         <div><h3>Messenger/Saifuddin</h3></div>
         <div class="tomal">
           <div>
-            <img src="icons8-male-user-48 (1).png" alt="" />
+            <img class="logo" src="icons8-male-user-48 (1).png" alt="" />
           </div>
           <div>
             <h3>Tomal Ahmed</h3>
           </div>
           <div>
-             
-              <img  src="icons8-chevron-down-30.png" alt="">
-             
-            
+            <img class="logo" src="down.png" alt="" />
           </div>
         </div>
       </div>
       <div class="left_panel">
         <div class="item">
-          <img src="icons8-instagram-50.png" alt="" />
+          <img src="logo.png" class="logo" alt="" />
         </div>
-        <div class="item"><img src="icons8-home-48.png" alt="" /></div>
-        <div class="item"><img src="icons8-notification-50.png" alt="" /></div>
-        <div class="item"><img src="icons8-setting-50.png" alt="" /></div>
+        <div class="item"><img class="logo" src="icons8-home-48.png" alt="" /></div>
+        <div class="item"><img class="logo" src="icons8-notification-50.png" alt="" /></div>
+        <div class="item"><img class="logo" src="icons8-setting-50.png" alt="" /></div>
       </div>
       <div class="left_panel_lower">
-        <div class="item"><img src="icons8-arrow.gif" alt="" /></div>
+        <div class="item"><img class="logo import" src="import.png" alt="" /></div>
       </div>
       <div class="middle">
-        <div class="item"><img src="icons8-bbm-messenger-64.png" alt="" /></div>
-        <div class="item"><img src="icons8-link-50.png" alt="" /></div>
-        <div class="item"><img src="icons8-photo-30.png" alt="" /></div>
+        <div class="item"><img class="logo " src="message.png" alt="" /></div>
+        <div class="item"><img class="logo" src="icons8-link-50.png" alt="" /></div>
+        <div class="item"><img class="logo" src="photo.png" alt="" /></div>
       </div>
       <div class="main_content" id="chat"></div>
       <div class="input_button">
-        <input class="bnt" type="text" id="message-input" />
-        <button class="send-button" onclick="sendMessage()">Send</button>
+        <span class="icon">
+          
+          <svg id="svg-class1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />
+        </svg>
+        
+          
+          
+          
+      </span>
+        <input onkeyup="TypeIndictor()" class="bnt" type="text" id="message-input" placeholder= " write your message here"/>
+       
+        
+        
+        <button class="send-button" onclick="sendMessage()">
+          <span>Send</span>
+          <svg class="svg-class" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="22" height="20" fill="currentColor">
+            <path d="M2.87 2.298a.75.75 0 0 0-.812 1.021L3.39 6.624a1 1 0 0 0 .928.626H8.25a.75.75 0 0 1 0 1.5H4.318a1 1 0 0 0-.927.626l-1.333 3.305a.75.75 0 0 0 .811 1.022 24.89 24.89 0 0 0 11.668-5.115.75.75 0 0 0 0-1.175A24.89 24.89 0 0 0 2.869 2.298Z"/>
+        </svg>
+        
+          </svg>
+          
+          
+        </button>
       </div>
     </div>
 
