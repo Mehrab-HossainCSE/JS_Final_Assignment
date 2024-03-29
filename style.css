@@ -269,3 +269,32 @@ body {
   width: 30px;
   margin-left: 1rem;
 }
+@media only screen and (max-width: 768px) {
+  .header {
+    display: none;
+  }
+
+  .left_panel {
+    display: none;
+  }
+
+  .root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .main_content {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 13;
+  }
+
+  .input_button {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 13;
+    grid-row-end: 14;
+  }
+}

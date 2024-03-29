@@ -11,7 +11,6 @@ function TypeIndictor() {
 }
 
 function sendMessage() {
-  // Get input value
   var messageInput = document.getElementById("message-input");
   var messageText = messageInput.value;
 
@@ -20,51 +19,41 @@ function sendMessage() {
     return;
   }
 
-  // Create new message div
   var newD = document.createElement("div");
   newD.innerHTML = messageText;
   newD.classList.add("message-sent-tomal");
 
-  // Create profile image
   var profileImage = document.createElement("img");
   profileImage.src = "icons8-male-user-48 (1).png";
-  profileImage.style.width = "30px"; // Set the desired width
+  profileImage.style.width = "30px";
   profileImage.style.height = "30px";
   profileImage.alt = "Profile";
   profileImage.classList.add("profile-picture");
 
-  // Create sender name element
   var newP = document.createElement("h3");
   newP.innerHTML = "Tomal";
   newP.appendChild(profileImage);
 
-  // Create confirmation icon
   var confirmationIcon = document.createElement("span");
-  confirmationIcon.innerHTML = "✓"; // Double checkmark symbol
-  confirmationIcon.style.color = "gray"; // Set color to gray initially
-  confirmationIcon.style.marginLeft = "5px"; // Add some margin to separate it from the message
+  confirmationIcon.innerHTML = "✓";
+  confirmationIcon.style.color = "gray";
+  confirmationIcon.style.marginLeft = "5px";
 
-  // Append confirmation icon to the message div
   newD.appendChild(confirmationIcon);
 
-  // Append sender name and message div to the chat
   document.getElementById("chat").appendChild(newP);
   document.getElementById("chat").appendChild(newD);
 
-  // Scrolls the div to the top
-
-  // Simulate WhatsApp's message status update
   setTimeout(function () {
-    confirmationIcon.style.color = "gray"; // Message sent
+    confirmationIcon.style.color = "gray";
   }, 1000);
   setTimeout(function () {
-    confirmationIcon.style.color = "black"; // Message delivered
+    confirmationIcon.style.color = "black";
   }, 2000);
   setTimeout(function () {
-    confirmationIcon.style.color = "green"; // Message read
+    confirmationIcon.style.color = "green";
   }, 3000);
 
-  // Clear the input field
   messageInput.value = "";
 
   setTimeout(function () {
@@ -80,7 +69,7 @@ function sendMessage() {
     var message = messages[randomIndex];
     var words = message.split(" ");
     var index = 0;
-    var typingSpeed = 100; // Adjust typing speed (milliseconds per character)
+    var typingSpeed = 100;
 
     var newD = document.createElement("div");
     newD.classList.add("message-sent-saifuddin");
@@ -98,7 +87,7 @@ function sendMessage() {
     newP.appendChild(nameElement);
     var chatContainer = document.getElementById("chat");
     chatContainer.appendChild(newP);
-    chatContainer.appendChild(newD).style.textAlign = "left"; // Appending user message below the profile container
+    chatContainer.appendChild(newD).style.textAlign = "left";
 
     var intervalId = setInterval(function () {
       if (index < words.length) {
